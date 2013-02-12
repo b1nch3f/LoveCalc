@@ -5,4 +5,4 @@ the love percentage between two people, read the readme.txt file for more inform
 
 Original idea : A friend
 
-Original programmer : Sangram Kesari Ray
+Original programmer : Sangram Kesari Ray(@sngrmkr)
