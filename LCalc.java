@@ -6,8 +6,9 @@ import java.io.PrintWriter;
 import java.util.StringTokenizer;
 import java.io.InputStream;
 import java.util.*;
+import javax.swing.JOptionPane;
 
-public class LCalc {
+public class Main {
 	public static void main(String[] args) {
 		InputStream inputStream = System.in;
 		OutputStream outputStream = System.out;
@@ -21,10 +22,12 @@ public class LCalc {
 
 class LoveCalc {
 	public void solve(InputReader in, PrintWriter out) {
-        int numTests = in.nextInt();
-        
-		while(numTests-- != 0) {
-			String lcString = in.next();
+			String lcString;
+			try {
+				lcString = JOptionPane.showInputDialog("Please enter a string e.g. sangramlovemath");
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
 			StringBuffer lcBuffer = new StringBuffer(lcString);
 			int len = lcString.length();
 			char[] lcCharArray = new char[len];
@@ -73,8 +76,7 @@ class LoveCalc {
 			}
 			int one = lc.get(0);
 			int two = lc.get(1);
-			out.println(one+""+two+"%");
-		}
+			JOptionPane.showMessageDialog(null, lcString+"=>"+one+""+two+"%");
 	}	
 }
 
